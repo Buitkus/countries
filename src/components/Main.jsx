@@ -9,7 +9,7 @@ const Main = () => {
     const getData = () => {
         // gauti duomenis is serviso
         getAllCountriesInfo()
-        .then(response => setCountries(response.data))
+        .then(response => setCountries(response))
     }
 
     // kada pakviesi daryti req uzklausa pasako mums effect
