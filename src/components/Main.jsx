@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import getAllCountriesInfo from '../services/countriesService'
+import Country from './Country';
 
 const Main = () => {
     // state visada aprasomas virsuje
@@ -16,9 +17,11 @@ const Main = () => {
     useEffect(() => {
     getData();
     }, []);
-    console.log(countries);
+    // console.log(countries);
   return (
-    <div>Main</div>
+    <div>
+        <Country allCountries={countries}/>
+    </div>
   )
 }
 
