@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import getAllCountriesInfo from '../services/countriesService'
+import ButtonsList from './ButtonsList';
 import Country from './Country';
 
 const Main = () => {
@@ -17,9 +18,27 @@ const Main = () => {
     useEffect(() => {
     getData();
     }, []);
+
+  
+    const myCountries = [];
+    countries.map((country) => (
+      myCountries.push(country.region)
+    ))
+
+    let sortedCountries = [];
+
+
+    
+
+    
+   
+  
+   
+
     // console.log(countries);
   return (
     <div>
+      <ButtonsList allCountries={countries} />
         <Country allCountries={countries}/>
     </div>
   )

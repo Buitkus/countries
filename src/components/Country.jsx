@@ -2,12 +2,18 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const Country = ({ allCountries }) => {
-  console.log(allCountries);
+  
+
+
+  // function sorting(region) {
+  
+  // }
+
   return (
-    <div>
+    <div className="d-flex justify-content-center flex-wrap">
       {allCountries !== undefined && allCountries.length !== 0 ? (
         allCountries.map((country, index) => (
-          <Card style={{ width: "18rem" }} key={index}>
+          <Card style={{ width: "18rem" }} key={index} className="m-3">
             <Card.Img
               variant="top"
               src={country.flags.svg}
